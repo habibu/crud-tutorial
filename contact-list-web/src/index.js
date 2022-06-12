@@ -1,8 +1,13 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import getConfig from './config.js';
 import * as nearAPI from 'near-api-js';
+
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Initializing contract
 async function initContract() {

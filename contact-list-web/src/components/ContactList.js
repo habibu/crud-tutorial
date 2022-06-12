@@ -1,11 +1,13 @@
-// src/components/TodoList.js
-import { useEffect, useState } from "react";
-import { Todo } from "./Todo";
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
+// src/components/ContactList.js
+import React, { useEffect, useState } from "react";
+import { Contact } from "./Contact";
 
-const PER_PAGE_LIMIT = 3;
+const PER_PAGE_LIMIT = 5;
 
-const TodoList = ({ contract }) => {
-  const [todos, setTodos] = useState([]);
+const ContactList = ({ contract }) => {
+  const [contacts, setContacts] = useState([]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -18,18 +20,20 @@ const TodoList = ({ contract }) => {
     }
 
     // every second after the component first mounts
-    // update the list of todos by invoking the get
+    // update the list of Contacts by invoking the get
     // method on the smart contract
     const id = setInterval(() => {
+      console.log("Testing..",contract)
       contract
         .get({ offset, limit: PER_PAGE_LIMIT })
-        .then((todos) => setTodos(todos));
+        .then((contacts) => setContacts(contacts));
     }, 1000);
 
     return () => clearInterval(id);
   }, [page, contract]);
 
   return (
+    <>
     <ul>
       <div className="flex">
       Current Page: {page}
@@ -37,13 +41,14 @@ const TodoList = ({ contract }) => {
       <button onClick={() => setPage((page) => page - 1)}>&lt;</button>
       {" "}
       <button onClick={() => setPage((page) => page + 1)}>&gt;</button>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          <Todo contract={contract} {...todo} />
+      {contacts.map((contact) => (
+        <li key={contact.id}>
+          <Contact contract={contract} {...Contact} />
         </li>
       ))}
     </ul>
+    </>
   );
 }
 
-export default TodoList;
+export default ContactList;
