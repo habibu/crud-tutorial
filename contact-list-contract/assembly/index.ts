@@ -23,8 +23,6 @@ export function updateContact(id:string, contact: Contact): void {
   
   if (storedContactByID !== null){
     contactsList.set(contact.id, Contact.fromPayload(contact));
-  }else{
-    throw new Error(`A contact with ${contact.id} already exist`);
   }
 }
 
