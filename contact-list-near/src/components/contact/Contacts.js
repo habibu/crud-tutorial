@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { toast } from "react-toastify";
 import CreateContact from "./CreateContact";
-//import Contact from "./Contact";
+import UpdateContact from "./UpdateContact";
 import Loader from "../utils/Loader";
 import { Button, Table } from "react-bootstrap";
 import { NotificationSuccess, NotificationError } from "../utils/Notifications";
@@ -11,7 +11,7 @@ import { getContacts as getContactList, createContact, deleteContact} from "../.
 const Contacts = ()=> {
     const [contacts, setContacts] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    
     const getAllContact = useCallback(async ()=> {
         try {
             setLoading(true);
@@ -84,11 +84,9 @@ const Contacts = ()=> {
                                         <td>{contact.telephone}</td>
                                         <td>{contact.email}</td>
                                         <td>
-                                            <Button
-                                                variant="outline-dark"
-                                                className="rounded-pill px-3 mt-3"
-                                                onClick={deleteContactById}
-                                            >Delete</Button>
+                                           <UpdateContact 
+                                                        update={addContact}
+                                                        />
                                         </td>
                                 </tr>
                                 ))}

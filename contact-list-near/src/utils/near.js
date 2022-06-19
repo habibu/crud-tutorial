@@ -20,7 +20,7 @@ export async function initializeContract() {
         nearEnv.contractName,
         {
             viewMethods: ["getContact", "getContacts"],
-            changeMethods: ["setContact", "deleteContact"]
+            changeMethods: ["setContact", "deleteContact", "updateContact"]
         }
     );
 }

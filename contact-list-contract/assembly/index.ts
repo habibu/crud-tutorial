@@ -18,7 +18,23 @@ export function getContacts(): Contact[]{
   return contactsList.values();
 }
 
-export function deleteContact(id:string): void {
-  contactsList.delete(id);
+export function updateContact(id:string, contact: Contact): void {
+  let storedContactByID = contactsList.get(id);
+  
+  if (storedContactByID !== null){
+    contactsList.set(contact.id, Contact.fromPayload(contact));
+  }else{
+    throw new Error(`A contact with ${contact.id} already exist`);
+  }
+}
+
+export function deleteContract(id:string): void {
+  
+  let storedContact = contactsList.get(id);
+  if(storedContact !== null ){
+    contactsList.delete(id);
+  }else {
+    throw new Error(`A contact does not exist`);
+  }
 }
 
