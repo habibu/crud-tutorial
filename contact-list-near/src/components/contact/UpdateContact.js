@@ -1,9 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
-import { toast } from "react-toastify";
 import { Button, Modal, Form, FloatingLabel } from "react-bootstrap";
-import { getContact as getContactByID, getContacts as getContactList } from "../../utils/contacts";
-import { NotificationSuccess, NotificationError } from "../utils/Notifications";
+import { getContact as getContactByID } from "../../utils/contacts";
+
 
 const UpdateContact = ({ update }) => {
     const [ firstName, setFirstName] = useState("");
@@ -27,11 +27,12 @@ const UpdateContact = ({ update }) => {
         }finally{
             setLoading(false);
         }
-    });
+    }, []);
 
    
     useEffect( ()=> {
         getContactById();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
    
     

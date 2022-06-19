@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 import CreateContact from "./CreateContact";
 import UpdateContact from "./UpdateContact";
 import Loader from "../utils/Loader";
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { NotificationSuccess, NotificationError } from "../utils/Notifications";
-import { getContacts as getContactList, createContact, deleteContact} from "../../utils/contacts"
+import { getContacts as getContactList, createContact} from "../../utils/contacts"
 
 const Contacts = ()=> {
     const [contacts, setContacts] = useState([]);
@@ -21,7 +21,7 @@ const Contacts = ()=> {
         }finally{
             setLoading(false);
         }
-    });
+    }, []);
 
     const addContact = async (data) =>{
         try {
@@ -38,19 +38,6 @@ const Contacts = ()=> {
         }
     };
 
-    const deleteContactById = async (id) => {
-        try {
-            setLoading(true);
-            await deleteContact(id).then((response) => getAllContact());   
-            toast(<NotificationSuccess text="Contact deleted."/>);
-        } catch (error) {
-            console.log(error);
-            toast(<NotificationError text="Failed to delete contact."/>);
-        }finally {
-            setLoading(false)
-        }
-
-    }
 
     useEffect( ()=> {
         getAllContact();
