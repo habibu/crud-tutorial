@@ -1,7 +1,7 @@
 # Contact List App
 
 
-This was developed after learning this tutorial [building a CRUD dApp](https://docs.near.org/docs/tutorials/apps/todos-crud-app) and NEAR Development 101 program at this: [deacde](https://dacade.org/communities/near/courses/near-101)
+This was developed after learning this tutorial [building a CRUD dApp](https://docs.near.org/docs/tutorials/apps/todos-crud-app) and [NEAR Development 101 program, by deacde](https://dacade.org/communities/near/courses/near-101)
 
 # Notes
 
