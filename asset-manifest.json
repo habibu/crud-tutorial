@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/crud-tutorial/static/css/main.d87cbb72.chunk.css",
+    "main.js": "/crud-tutorial/static/js/main.19b5a8c3.chunk.js",
+    "main.js.map": "/crud-tutorial/static/js/main.19b5a8c3.chunk.js.map",
+    "runtime-main.js": "/crud-tutorial/static/js/runtime-main.86de6de2.js",
+    "runtime-main.js.map": "/crud-tutorial/static/js/runtime-main.86de6de2.js.map",
+    "static/css/2.da47701c.chunk.css": "/crud-tutorial/static/css/2.da47701c.chunk.css",
+    "static/js/2.c8219e93.chunk.js": "/crud-tutorial/static/js/2.c8219e93.chunk.js",
+    "static/js/2.c8219e93.chunk.js.map": "/crud-tutorial/static/js/2.c8219e93.chunk.js.map",
+    "static/js/3.228ecf34.chunk.js": "/crud-tutorial/static/js/3.228ecf34.chunk.js",
+    "static/js/3.228ecf34.chunk.js.map": "/crud-tutorial/static/js/3.228ecf34.chunk.js.map",
+    "index.html": "/crud-tutorial/index.html",
+    "static/css/2.da47701c.chunk.css.map": "/crud-tutorial/static/css/2.da47701c.chunk.css.map",
+    "static/css/main.d87cbb72.chunk.css.map": "/crud-tutorial/static/css/main.d87cbb72.chunk.css.map",
+    "static/js/2.c8219e93.chunk.js.LICENSE.txt": "/crud-tutorial/static/js/2.c8219e93.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/crud-tutorial/static/media/bootstrap-icons.f2539a50.woff2",
+    "static/media/nearest_logo.445a8087.jpg": "/crud-tutorial/static/media/nearest_logo.445a8087.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86de6de2.js",
+    "static/css/2.da47701c.chunk.css",
+    "static/js/2.c8219e93.chunk.js",
+    "static/css/main.d87cbb72.chunk.css",
+    "static/js/main.19b5a8c3.chunk.js"
+  ]
+}
